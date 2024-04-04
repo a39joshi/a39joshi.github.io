@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { PiFlowerFill } from "react-icons/pi";
+import BrownFlower from "../images/brown-flower.png"
 import "../styles/main.css";
 
 function Navbar() {
@@ -11,16 +13,19 @@ function Navbar() {
 
     return (
         <header>
-            <h3>Logo</h3>
-            <nav>
-                <a href="/#">About</a>
+            <h3>
+                <img src={BrownFlower} alt="Home"  className="logo"/>
+                {/* <PiFlowerFill/> */}
+            </h3>
+            <nav ref={navRef}>
+                {/* <a href="/#">About</a> */}
                 <a href="/#">Resume</a>
                 <a href="/#">Contact</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes/>
                 </button>
             </nav>
-            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+            <button className="nav-btn" onClick={showNavbar}>
                 <FaBars/>
             </button>
         </header>

@@ -9,7 +9,7 @@
 }
 
 :root{
-    --mainColorLight: #FFFCC9;
+    --mainColorLight: #ffdf88;
     --mainColor: #d9d696;
     --secondaryColor: #8FBC8F; 
     --textColor: #000; 
@@ -29,6 +29,7 @@ nav a{
     margin: 0 2rem;
     color: var(--textColor);
     text-decoration: none;
+    font-size: 1.3rem;
 }
 
 nav a:hover{
@@ -44,6 +45,38 @@ header .nav-btn{
     color: var(--textColor);
     visibility: hidden;
     opacity: 0;
+    font-size: 1.8rem;
+}
+
+header .logo{
+    height: 3.5rem;
+
+}
+
+.header3 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 10rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 10rem;
+    margin-top: 2rem;
+    margin-right: 40%;
+}
+
+.background-container {
+    /* background-image: url("../images/yellow-flower.png"); */
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
 }
 
 /* Use this styling when screen size is less than 1024 px */
@@ -60,6 +93,7 @@ header .nav-btn{
         height: 100%;
         width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
@@ -72,6 +106,14 @@ header .nav-btn{
         transform: none; 
     }
 
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
 
+    nav a{
+        font-size: 1.5rem;
+    }
 
 }
