@@ -1,5 +1,9 @@
 import React from 'react'; 
 import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Resume from "./pages/Resume";
 
 function App() {
 
@@ -12,11 +16,14 @@ function App() {
 
   return (
     <React.Fragment>
-      <Navbar/>
-      <div class="background-container">
-        <h3 className='header3'>{IntroText}</h3>
-        <p>{AboutMeText}</p>
-      </div>
+      <Router>
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/resume" element={<Resume/>} />
+            <Route path="/contact" element={<Contact/>} />
+          </Routes>
+      </Router> 
     </React.Fragment>
 
   );

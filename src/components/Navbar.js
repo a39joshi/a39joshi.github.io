@@ -1,6 +1,6 @@
 import { useRef } from "react";
+import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from "react-icons/fa";
-import { PiFlowerFill } from "react-icons/pi";
 import BrownFlower from "../images/brown-flower.png"
 import "../styles/main.css";
 
@@ -14,13 +14,15 @@ function Navbar() {
     return (
         <header>
             <h3>
-                <img src={BrownFlower} alt="Home"  className="logo"/>
-                {/* <PiFlowerFill/> */}
+                <Link to="/">
+                    <img src={BrownFlower} alt="Home" className="logo"/>
+                </Link>
             </h3>
             <nav ref={navRef}>
-                {/* <a href="/#">About</a> */}
-                <a href="/#">Resume</a>
-                <a href="/#">Contact</a>
+                <Link to="/resume">Resume</Link>
+                <Link to="/contact">Contact</Link>
+                {/* <a href="/#">Resume</a>
+                <a href="/contact">Contact</a> */}
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes/>
                 </button>
@@ -31,6 +33,6 @@ function Navbar() {
         </header>
 
     ); 
-}
+};
 
 export default Navbar;
