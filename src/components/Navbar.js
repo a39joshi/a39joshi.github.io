@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from "react-icons/fa";
-import BrownFlower from "../images/brown-flower.png"
+import Butterfly from "../images/butterfly.png"
+
 import "../styles/main.css";
 
 function Navbar() {
@@ -15,7 +16,7 @@ function Navbar() {
         <header>
             <h3>
                 <Link to="/">
-                    <img src={BrownFlower} alt="Home" className="logo"/>
+                    <img src={Butterfly} alt="Home" className="logo"/>
                 </Link>
             </h3>
             <nav ref={navRef}>

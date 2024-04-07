@@ -1,5 +1,7 @@
 import React from 'react'; 
 import Timeline from '../components/Timeline';
+import Headshot from "../images/headshot.png"
+
 function Home() {
     
     const IntroText = "Hi, I'm Anjali!";
@@ -13,6 +15,7 @@ function Home() {
       <div>
         <h3 className='header3'>{IntroText}</h3>
         <p className='homeparagraph'>{AboutMeText}</p>
+        <img src={Headshot} className="headshot-img"></img>
         <Timeline/>
       </div>
   
